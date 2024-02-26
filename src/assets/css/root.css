@@ -1,0 +1,22 @@
+@import "./fontawesome-all.css";
+@import "./firago-fonts.css";
+@import "./form.css";
+@import "./button.css";
+@import "./table.css";
+@import "./svg.css";
+@import "./shadow.css";
+@import "./toast.css";
+/* Global styles */
+* {
+    font-family: firaGO;
+}
+
+
+/* Main content */
+.main-content {
+  @apply mt-[60px] grid grid-cols-1 place-content-start transition-[width,margin-left,margin-right,padding-left,padding-right] duration-[.25s] ease-in print:m-0;
+}
+.content-space{
+    @apply my-8;
+}
+

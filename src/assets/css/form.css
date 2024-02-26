@@ -1,0 +1,63 @@
+/* Import Select  */
+@import "../../../node_modules/@ng-select/ng-select/themes/ant.design.theme.css";
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect,
+.form-radio,
+.form-checkbox,
+.form-checkbox::before,
+.form-radio::before{
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect {
+  @apply appearance-none tracking-wide outline-none placeholder:font-light focus:outline-none;
+  contain: paint;
+}
+
+.ng-select.ng-select-opened > .ng-select-container{
+
+}
+.ng-select .ng-select-container{
+  @apply border-transparent shadow-xl rounded-3xl py-2;
+}
+.ng-arrow-wrapper {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewbox='0 0 20 20'%3e%3cpath stroke='%235C6B8A' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-size: 1em 1em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ng-select.custom-select .ng-select-container .ng-value-container .ng-placeholder{
+  @apply text-dark-purple;
+}
+.ng-select.custom-select .ng-dropdown-panel{
+  @apply mt-2 shadow-xl;
+}
+.ng-select.custom-select .ng-option-label{
+  @apply text-light-yellow font-semibold text-sm;
+}
+.ng-select.custom-select .ng-dropdown-panel-items{
+  @apply my-3;
+}
+/* ng-option-marked */
+.ng-select.custom-select .ng-option.ng-option-selected .ng-option-label{
+  @apply text-light-green;
+}
+
+.ng-select.custom-select .ng-option.ng-option-marked .ng-option-label{
+  @apply text-light-green after:float-right;
+}
+.ng-select.custom-select .ng-option.ng-option-marked .ng-option-label:after{
+  @apply text-sm;
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+}

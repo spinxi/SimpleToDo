@@ -1,0 +1,31 @@
+.finished-svg::before {
+    content: '';
+    display: inline-block;
+    width: 22px; 
+    height: 13px;
+    background-image: url('data:image/svg+xml,%3Csvg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M5.6998 13L0.0498047 7.34998L1.4748 5.94998L5.7248 10.2L7.1248 11.6L5.6998 13ZM11.3498 13L5.6998 7.34998L7.0998 5.92498L11.3498 10.175L20.5498 0.974976L21.9498 2.39998L11.3498 13ZM11.3498 7.34998L9.9248 5.94998L14.8748 0.999976L16.2998 2.39998L11.3498 7.34998Z" fill="%238FF4DB"/%3E%3C/svg%3E');
+    background-size: cover;
+    margin-right: 10px;
+}
+.in-progress-svg::before {
+    content: '';
+    display: inline-block;
+    width: 14px; 
+    height: 14px;
+    background-image: url('data:image/svg+xml,%3Csvg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.0498047 14L5.0498 7L0.0498047 0H2.4998L7.4998 7L2.4998 14H0.0498047ZM5.9998 14L10.9998 7L5.9998 0H8.44981L13.4498 7L8.44981 14H5.9998Z" fill="%23FFDF8C"/%3E%3C/svg%3E');
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.add-new-svg::before {
+    @apply text-dark-purple;
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-image: url('data:image/svg+xml,%3Csvg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12 16.975V13.975H9V11.975H12V8.975H14V11.975H17V13.975H14V16.975H12ZM0 14V12H7.075C7.025 12.35 7.00417 12.6833 7.0125 13C7.02083 13.3167 7.05 13.65 7.1 14H0ZM0 10V8H9.65C9.26667 8.26667 8.92083 8.56667 8.6125 8.9C8.30417 9.23333 8.03333 9.6 7.8 10H0ZM0 6V4H15V6H0ZM0 2V0H15V2H0Z" fill="%23424242"/%3E%3C/svg%3E');
+    background-size: cover;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+

@@ -1,0 +1,62 @@
+<section 
+    class="px-4 sm:px-10 lg:px-8 py-12 bg-white"
+    [ngClass]="{'sticky top-0 my-shadow py-5': checkData}"
+>
+    <div>
+
+        <div 
+            *ngIf="!checkData" 
+            class="flex items-center justify-center sm:flex-row"
+        >
+            <svg class="text-dark-purple" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 16.975V13.975H9V11.975H12V8.975H14V11.975H17V13.975H14V16.975H12ZM0 14V12H7.075C7.025 12.35 7.00417 12.6833 7.0125 13C7.02083 13.3167 7.05 13.65 7.1 14H0ZM0 10V8H9.65C9.26667 8.26667 8.92083 8.56667 8.6125 8.9C8.30417 9.23333 8.03333 9.6 7.8 10H0ZM0 6V4H15V6H0ZM0 2V0H15V2H0Z" fill="currentColor"/>
+            </svg>
+            <p *ngIf="mode === 'edit'" class="mt-2 sm:mt-0 sm:ms-3 text-dark-purple text-s font-semibold">დავალების რედაქტირება</p>
+            <p *ngIf="mode === 'add'" class="mt-2 sm:mt-0 sm:ms-3 text-dark-purple text-s font-semibold">ახალი დავალების დამატება</p>
+        </div>
+
+        <div 
+            class="flex flex-col sm:flex-row sm:items-end gap-10 my-10"
+            [ngClass]="checkData ? 'justify-between' : 'justify-center'"
+        >
+
+            <div 
+                *ngIf="checkData" 
+                class="flex flex-row items-center"
+            >
+                <svg class="text-dark-purple" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 16.975V13.975H9V11.975H12V8.975H14V11.975H17V13.975H14V16.975H12ZM0 14V12H7.075C7.025 12.35 7.00417 12.6833 7.0125 13C7.02083 13.3167 7.05 13.65 7.1 14H0ZM0 10V8H9.65C9.26667 8.26667 8.92083 8.56667 8.6125 8.9C8.30417 9.23333 8.03333 9.6 7.8 10H0ZM0 6V4H15V6H0ZM0 2V0H15V2H0Z" fill="currentColor"/>
+                </svg>
+                <p *ngIf="mode === 'add'" class="sm:ms-3 text-dark-purple text-s font-semibold">ახალი დავალების დამატება</p>
+                <p *ngIf="mode === 'edit'" class="sm:ms-3 text-dark-purple text-s font-semibold">დავალების რედქტირება</p>
+            </div>
+
+            <label class="block">
+                <span class="font-normal text-s text-dark-purple">შეიყვანეთ დასახელება</span>
+                <input
+                    class="form-input placeholder:text-dark-purple focus:border-dark-purple border border-transparent mt-1.5 w-full rounded-3xl bg-white-grey px-3 py-2"
+                    placeholder="დასახელება"
+                    type="text"
+                    [(ngModel)]="selectedTask.name"
+                />
+            </label>
+
+            <ng-select 
+                labelForId="statuses"
+                [searchable]="false"
+                [items]="statuses" 
+                bindLabel="label" 
+                bindValue="value" 
+                class="flex-initial w-full sm:w-64 custom-select mt-4 sm:mt-0"
+                placeholder="აირჩიეთ დავალების სტატუსი"
+                [(ngModel)]="selectedTask.status"
+            />
+
+            <button (click)="postData()" class="btn rounded-full bg-dark-purple font-normal text-white text-s mt-4 sm:mt-0">
+                <i class="fa-solid fa-plus me-2"></i> 
+                <span *ngIf="mode==='add'" >დამატება</span>
+                <span *ngIf="mode==='edit'" >რედაქტირება</span>
+            </button>
+        </div>
+    </div>
+</section>
