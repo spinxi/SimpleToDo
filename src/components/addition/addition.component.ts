@@ -34,7 +34,7 @@ export class AdditionComponent {
   postData() {
     //Check data and display toaster for errors.
     if (!this.selectedTask || !this.selectedTask.name || !this.selectedTask.status) {
-      this.successToast("Name and status are required fields!");
+      this.errorToast("Name and status are required fields!");
       return;
     }
     //Here I will check if mode is add or edit
